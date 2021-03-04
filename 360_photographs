@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+	<title>A-Frame - Image Textures</title>
+	<script src="js/aframe-master.1.0.4.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+</head>
+
+<body>
+<a-scene antialias="true">
+	
+	<a-assets>
+		<img id="sky" src="images/stars.jpg" crossorigin="anonymous" />
+		<img id="grass" src="images/grass.jpg" crossorigin="anonymous" />
+		<img id="crate" src="images/crate.jpg" crossorigin="anonymous" />
+		<img id="earth" src="images/earth-sphere.jpg" crossorigin="anonymous" />
+		<img id="hexagons" src="images/hexagons.png" crossorigin="anonymous" />
+        <img id="sea" src="images/1.jpg" crossorigin="anonymous" />
+        <img id="sand" src="images/Minecraft-Sand-Block.jpg" crossorigin="anonymous" />
+        <img id="sponge" src="images/sponge.jpg" crossorigin="anonymous" />
+         <img id="bob" src="images/bob.jpg" crossorigin="anonymous" />
+         <img id="pineapple" src="images/pineapple.jpg" crossorigin="anonymous" />
+        <img id="street" src="images/street.jpg" crossorigin="anonymous" />
+        <img id="space" src="images/space.jpg" crossorigin="anonymous" />
+        <img id="night" src="images/night.jpg" crossorigin="anonymous" />
+        <img id="fest" src="images/festival.jpg" crossorigin="anonymous" />
+        <img id="pan" src="images/20210212_143120.jpg" crossorigin="anonymous" />
+             </a-assets>
+		<a-camera>
+        <a-cursor></a-cursor>
+    </a-camera>
+	<a-sky 
+		color = "#FFFFFF"
+		material = "src: #street">
+	</a-sky>
+
+     <a-box
+        position="-2 2 -2"
+        scale=".2 .2 .2"     
+        rotation="0 45 0"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #space">
+    </a-box>  
+	
+    <a-box
+        position="-2 2 4"
+        scale=".2 .2 .2"     
+        rotation="0 -90 0"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #night"      
+      ></a-box>  
+    
+     <a-box
+        position="2 2 -4"
+        scale=".2 .2 .2"     
+        rotation="0 -90 0"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #fest"      
+      ></a-box>  
+    <a-box
+        position="2 2 -6"
+        scale=".2 .2 .2"     
+        rotation="0 -45 0"
+        event-set__enter="_event: mouseenter; _target: a-sky; material.src: #pan">
+    </a-box>  
+</a-scene>
+</body>
+</html>
